@@ -1,0 +1,29 @@
+li {
+	cursor: pointer;
+	margin: 2px auto;
+	width: 350px;
+}
+
+.buttonkey {
+	float: right;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #f41c18;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	cursor: pointer;
+}
+.finish {
+	opacity: 0.5;
+	font-weight: bold;
+	color: #222222;
+	text-shadow: 0.5px 0.4px #222222;
+
+}
+.unfinish {
+	font-weight: bold;
+	color: #00c100;
+	text-shadow: 0.5px 0.4px #222222;
+
+}
