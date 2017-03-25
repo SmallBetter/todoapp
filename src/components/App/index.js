@@ -15,32 +15,9 @@ class App extends Component {
     },
   }
 
-  showFinish = () => {
+  showList = (showFinish, showUnFinish) => {
     this.setState({
-      show: {
-        showFinish: true,
-        showUnFinish: false,
-      },
-    })
-  }
-
-  showUnFinish = () => {
-    this.setState({
-      show:
-      {
-        showFinish: false,
-        showUnFinish: true,
-      },
-    })
-  }
-
-  showAll = () => {
-    this.setState({
-      show:
-      {
-        showFinish: true,
-        showUnFinish: true,
-      },
+      show: { showFinish, showUnFinish },
     })
   }
 
@@ -77,7 +54,7 @@ class App extends Component {
         <img src={logo} className="App-logo" alt="logo" />
         <TodoInput handleAddTodo={this.addTodo} />
       </div>
-        <ShowTodoList handleAll={this.showAll} handleFinish={this.showFinish} handleUnFinish={this.showUnFinish} />
+        <ShowTodoList handleShowList={this.showList} />
         <TodoList {...this.state} handleToggle={this.toggleTodo} handleRemove={this.removeTodo} />
       </div>
     )
